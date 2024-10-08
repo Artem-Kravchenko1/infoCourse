@@ -1,22 +1,20 @@
 #include <stdio.h>
-void one_three(void);
-void two(void);
 
+
+int strlen(char s[]);
 int main() {
 	char beep[32] = "ї";
 	printf("Start:\n");
-	one_three();
-	printf("Finished!");
+	printf("Finished! %d", strlen("Hello"));
 	printf("%c, %d", beep, beep);
 	return 0;
 }
 
-void one_three(void) {
-	printf("One\n");
-	two();
-	printf("Three\n");
-}
+int strlen(char *s) {
+	char *k = s;
+	char *p = k;
 
-void two(void) {
-	printf("Two\n");
+	while (*p != '\0')
+		p++;
+	return p - s;
 }

@@ -8,6 +8,7 @@ double matfunc11(double x);
 int main() {
 
 	int var;
+	if (!fopen("input.txt", "r")) return 0;
 	in = fopen("input.txt", "r");
 	out = fopen("output.txt", "w");
 	outb = fopen("outputb.txt", "wb");
